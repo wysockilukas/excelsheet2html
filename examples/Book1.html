@@ -1,0 +1,578 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Title</title>
+        
+        <style class="c_style">
+        
+                .c_bgcolor_F9F6D5 {
+                    background-color: #F9F6D5;
+                }        
+            
+
+                .c_font_b {
+                    font-weight: bold;
+                }        
+            
+
+                .c_bgcolor_theme9 {
+                    background-color: #F79646;
+                }        
+            
+
+                table.c_table td.c_label_padding_2 {
+                    padding-left: 20px;
+                }        
+            
+
+                .c_bgcolor_CFDCF5 {
+                    background-color: #CFDCF5;
+                }        
+            
+.c_table
+{
+table-layout: fixed;
+border-spacing: 0;
+border-collapse: collapse;
+font-family: Calibri, sans-serif;
+}
+
+.c_table td.c_row_num, .c_table th
+{
+border-top: 1px solid rgba(205, 205, 205, 0.8);
+border-bottom: 1px solid rgba(205, 205, 205, 0.8);
+border-left: 1px solid rgba(205, 205, 205, 0.8);
+border-right: 1px solid rgba(205, 205, 205, 0.8);
+color:rgb(68, 68, 68);
+font-family:"Noto Sans", sans-serif;
+font-size: 13.3333px;
+padding: 2px 10px;
+}
+
+.c_table td
+{
+padding: 2px 10px;
+font-size: 14px;
+}
+
+.c_ontop
+{
+border-top: 1px solid rgba(205, 205, 205, 0.8);
+border-left: 1px solid rgba(205, 205, 205, 0.8);
+border-right: 1px solid rgba(205, 205, 205, 0.8);
+}
+
+.c_onleft 
+{
+    border-top: 1px solid rgba(205, 205, 205, 0.8);
+    border-left: 1px solid rgba(205, 205, 205, 0.8);
+    border-bottom: 1px solid rgba(205, 205, 205, 0.8);
+}
+
+.c_deadarea 
+{
+    border-top: 1px solid rgba(205, 205, 205, 0.8);
+    border-left: 1px solid rgba(205, 205, 205, 0.8);
+}
+
+th, .c_row_num 
+{
+	background: #e6e6e6;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 14px;
+	height:25px;
+	text-align: center;
+}
+
+.c_table th 
+{
+    position: sticky;
+    top:0;
+}
+
+.c_resizer  
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    cursor: col-resize;
+    user-select: none;
+    height:100%;
+}
+
+.c_table td.c_row_num 
+{
+width: 40px;
+}
+
+.c_table td.c_values 
+{
+border: unset;
+text-align:right;
+}
+
+.c_table td.c_values.c_formula_childs 
+{
+border: 2px dotted #e7d0fdf5;
+background-color: #e7d0fd91;
+}
+
+.c_table td.c_label  
+{
+border-top: unset;
+border-left: unset;
+border-right: unset;
+}
+
+.c_table td.c_header  
+{
+border-top: unset;
+border-left: unset;
+}
+
+.c_table td.c_number 
+{
+text-align:right;
+}
+
+.c_table td.c_header, .c_title 
+{
+text-align:center;
+}
+
+.c_table td.c_label_rowspan 
+{
+border-left: unset;
+}
+
+.c_table td.c_row_num ,th 
+{
+text-align:center;
+background-color:#ddd;
+font-weight: normal;
+}
+
+.c_onright 
+{
+    border-top: 1px solid rgba(205, 205, 205, 0.8);
+    border-right: 1px solid rgba(205, 205, 205, 0.8);
+    border-bottom: 1px solid rgba(205, 205, 205, 0.8);
+}
+
+.c_onbottom 
+{
+    border-left: 1px solid rgba(205, 205, 205, 0.8);
+    border-right: 1px solid rgba(205, 205, 205, 0.8);
+    border-bottom: 1px solid rgba(205, 205, 205, 0.8);
+}
+
+.c_last_row 
+{
+    border-bottom: unset;
+}
+
+.c_first_row 
+{
+    border-top: unset;
+}
+
+.c_right_column 
+{
+    border-right: unset;
+}
+
+table.c_table td.c_b_bottom 
+{
+    border-bottom: 1px solid black;
+}
+
+table.c_table td.c_b_top 
+{
+    border-top: 1px solid black;    
+}
+
+table.c_table td.c_b_left 
+{
+    border-left: 1px solid black;    
+}
+
+table.c_table td.c_b_right 
+{
+    border-right: 1px solid black;    }
+        </style>
+        
+    </head>
+    <body>
+        
+        <table class="c_table" style="width:735px">
+        <colgroup>
+ <col class="c_row_num" style="width:40px">
+ <col class="c_col_A" style="width:85px">
+ <col class="c_col_B" style="width:32px">
+ <col class="c_col_C" style="width:38px">
+ <col class="c_col_D" style="width:198px">
+ <col class="c_col_E" style="width:114px">
+ <col class="c_col_F" style="width:114px">
+ <col class="c_col_G" style="width:114px">
+</colgroup>
+
+        <thead>
+<tr>
+ <th class="c_row_num"></th>
+ <th class="c_col_A">A<div class="c_resizer"></div></th>
+ <th class="c_col_B">B<div class="c_resizer"></div></th>
+ <th class="c_col_C">C<div class="c_resizer"></div></th>
+ <th class="c_col_D">D<div class="c_resizer"></div></th>
+ <th class="c_col_E">E<div class="c_resizer"></div></th>
+ <th class="c_col_F">F<div class="c_resizer"></div></th>
+ <th class="c_col_G">G<div class="c_resizer"></div></th>
+</tr>
+</thead>
+
+        <tbody>
+<tr>
+<td class="c_row_num">1</td>
+<td id="A1" class="c_onleft"></td>
+<td id="B1" class="c_ontop"></td>
+<td id="C1" class="c_ontop"></td>
+<td id="D1" class="c_ontop"></td>
+<td id="E1" class="c_ontop"></td>
+<td id="F1" class="c_ontop"></td>
+<td id="G1" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">2</td>
+<td id="A2" class="c_onleft"></td>
+<td id="B2" class="c_ontop"></td>
+<td id="C2" class="c_ontop"></td>
+<td id="D2" class="c_ontop"></td>
+<td id="E2" class="c_ontop"></td>
+<td id="F2" class="c_ontop"></td>
+<td id="G2" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">3</td>
+<td id="A3" class="c_onleft"></td>
+<td id="B3" class="c_deadarea"></td>
+<td id="C3" class="c_deadarea"></td>
+<td id="D3" class="c_deadarea"></td>
+<td id="E3" class="c_b_bottom c_bgcolor_F9F6D5 c_font_b c_header">2021</td>
+<td id="F3" class="c_b_bottom c_bgcolor_F9F6D5 c_font_b c_header c_right_column">2022*</td>
+<td id="G3" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">4</td>
+<td id="A4" class="c_onleft"></td>
+<td id="B4" class="c_label_rowspan c_first_row" rowspan="8" ></td>
+<td id="C4" class="c_b_bottom c_font_b c_label c_first_row"  colspan="2">Revenue</td>
+<td id="E4" class="c_b_bottom c_font_b c_values" data-is-formula="true">3550</td>
+<td id="F4" class="c_b_bottom c_font_b c_values c_right_column" data-is-formula="true">3559.5</td>
+<td id="G4" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">5</td>
+<td id="A5" class="c_onleft"></td>
+<td id="C5" class="c_label_rowspan" rowspan="3" ></td>
+<td id="D5" class="c_label">Sales</td>
+<td id="E5" class="c_values">3000</td>
+<td id="F5" class="c_values c_right_column" data-is-formula="true">3004.5</td>
+<td id="G5" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">6</td>
+<td id="A6" class="c_onleft"></td>
+<td id="D6" class="c_label">Sales returns</td>
+<td id="E6" class="c_values">450</td>
+<td id="F6" class="c_values c_right_column" data-is-formula="true">459</td>
+<td id="G6" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">7</td>
+<td id="A7" class="c_onleft"></td>
+<td id="D7" class="c_label">Sales discounts</td>
+<td id="E7" class="c_values">100</td>
+<td id="F7" class="c_values c_right_column" data-is-formula="true">96</td>
+<td id="G7" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">8</td>
+<td id="A8" class="c_onleft"></td>
+<td id="C8" class="c_b_bottom c_font_b c_label"  colspan="2">Expeneses</td>
+<td id="E8" class="c_b_bottom c_font_b c_values" data-is-formula="true">1420</td>
+<td id="F8" class="c_b_bottom c_font_b c_values c_right_column" data-is-formula="true">1570</td>
+<td id="G8" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">9</td>
+<td id="A9" class="c_onleft"></td>
+<td id="C9" class="c_label_rowspan" rowspan="3" ></td>
+<td id="D9" class="c_label">Salaries & wages</td>
+<td id="E9" class="c_values">300</td>
+<td id="F9" class="c_values c_right_column" data-is-formula="true">450</td>
+<td id="G9" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">10</td>
+<td id="A10" class="c_onleft"></td>
+<td id="D10" class="c_label">Depreciation</td>
+<td id="E10" class="c_values">1000</td>
+<td id="F10" class="c_values c_right_column" data-is-formula="true">500</td>
+<td id="G10" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">11</td>
+<td id="A11" class="c_onleft"></td>
+<td id="D11" class="c_label">Office expenses</td>
+<td id="E11" class="c_values">120</td>
+<td id="F11" class="c_values c_right_column" data-is-formula="true">620</td>
+<td id="G11" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">12</td>
+<td id="A12" class="c_onleft"></td>
+<td id="B12" class="c_b_bottom c_bgcolor_theme9 c_font_b c_label"  colspan="3">Income</td>
+<td id="E12" class="c_b_bottom c_bgcolor_theme9 c_font_b c_values" data-is-formula="true">2130</td>
+<td id="F12" class="c_b_bottom c_bgcolor_theme9 c_font_b c_values c_right_column" data-is-formula="true">1989.5</td>
+<td id="G12" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">13</td>
+<td id="A13" class="c_onleft"></td>
+<td id="B13" class="c_label_padding_2 c_label"  colspan="3">Tax</td>
+<td id="E13" class="c_values" data-is-formula="true">426</td>
+<td id="F13" class="c_values c_right_column" data-is-formula="true">457.58500000000004</td>
+<td id="G13" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">14</td>
+<td id="A14" class="c_onleft"></td>
+<td id="B14" class="c_b_left c_b_top c_b_bottom c_bgcolor_CFDCF5 c_font_b c_label c_last_row"  colspan="3">Net income</td>
+<td id="E14" class="c_b_right c_b_top c_b_bottom c_bgcolor_CFDCF5 c_font_b c_values c_last_row" data-is-formula="true">3408</td>
+<td id="F14" class="c_b_right c_b_top c_b_bottom c_bgcolor_CFDCF5 c_font_b c_values c_last_row c_right_column" data-is-formula="true">3063.83</td>
+<td id="G14" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">15</td>
+<td id="A15" class="c_onleft"></td>
+<td id="B15" class="c_onbottom"></td>
+<td id="C15" class="c_onbottom"></td>
+<td id="D15" class="c_onbottom"></td>
+<td id="E15" class="c_onbottom"></td>
+<td id="F15" class="c_onbottom"></td>
+<td id="G15" class="c_onright"></td>
+</tr>
+<tr>
+<td class="c_row_num">16</td>
+<td id="A16" class="c_onleft"></td>
+<td id="B16" class="c_onbottom"></td>
+<td id="C16" class="c_onbottom"></td>
+<td id="D16" class="c_onbottom"></td>
+<td id="E16" class="c_onbottom"></td>
+<td id="F16" class="c_onbottom"></td>
+<td id="G16" class="c_onright"></td>
+</tr>
+</tbody>
+
+        </table>
+        
+        
+    <script>
+    const table_data = {};
+table_data.primary_cells = {'E5': 3000, 'E6': 450, 'E7': 100, 'E9': 300, 'E10': 1000, 'E11': 120, 'XXX1': 500.0, 'XXX2': 500.0};
+table_data.secondary_cells = {'E4': '=SUM(E5:E7)', 'E8': '=SUM(E9:E11)', 'E12': '=E4-E8', 'E13': '=20%*E12', 'E14': '=-2*(E13-E12)', 'F4': '=SUM(F5:F7)', 'F5': '=E5*100.15%', 'F6': '=2*(F5-E5)+E6', 'F7': '=E7*0.96', 'F8': '=SUM(F9:F11)', 'F9': '=E9*1.5', 'F10': '=E10-500', 'F11': '=E11+500', 'F12': '=F4-F8', 'F13': '=23%*F12', 'F14': '=-2*(F13-F12)'};
+table_data.formula_cells = {'E4': 3550, 'E8': 1420, 'E12': 2130, 'E13': 426, 'E14': 3408, 'F4': 3559.5, 'F5': 3004.5, 'F6': 459, 'F7': 96, 'F8': 1570, 'F9': 450, 'F10': 500, 'F11': 620, 'F12': 1989.5, 'F13': 457.58500000000004, 'F14': 3063.83};
+table_data.secondary_cells_1 = [{'parent': 'E4', 'child': 'E5', 'multiplier': 1.0}, {'parent': 'E4', 'child': 'E6', 'multiplier': 1.0}, {'parent': 'E4', 'child': 'E7', 'multiplier': 1.0}, {'parent': 'E8', 'child': 'E9', 'multiplier': 1.0}, {'parent': 'E8', 'child': 'E10', 'multiplier': 1.0}, {'parent': 'E8', 'child': 'E11', 'multiplier': 1.0}, {'parent': 'E12', 'child': 'E4', 'multiplier': 1.0}, {'parent': 'E12', 'child': 'E8', 'multiplier': -1.0}, {'parent': 'E13', 'child': 'E12', 'multiplier': 0.2}, {'parent': 'E14', 'child': 'E13', 'multiplier': -2.0}, {'parent': 'E14', 'child': 'E12', 'multiplier': 2.0}, {'parent': 'F4', 'child': 'F5', 'multiplier': 1.0}, {'parent': 'F4', 'child': 'F6', 'multiplier': 1.0}, {'parent': 'F4', 'child': 'F7', 'multiplier': 1.0}, {'parent': 'F5', 'child': 'E5', 'multiplier': 1.0015}, {'parent': 'F6', 'child': 'F5', 'multiplier': 2.0}, {'parent': 'F6', 'child': 'E5', 'multiplier': -2.0}, {'parent': 'F6', 'child': 'E6', 'multiplier': 1.0}, {'parent': 'F7', 'child': 'E7', 'multiplier': 0.96}, {'parent': 'F8', 'child': 'F9', 'multiplier': 1.0}, {'parent': 'F8', 'child': 'F10', 'multiplier': 1.0}, {'parent': 'F8', 'child': 'F11', 'multiplier': 1.0}, {'parent': 'F9', 'child': 'E9', 'multiplier': 1.5}, {'parent': 'F10', 'child': 'E10', 'multiplier': 1.0}, {'parent': 'F10', 'child': 'XXX1', 'multiplier': -1.0}, {'parent': 'F11', 'child': 'E11', 'multiplier': 1.0}, {'parent': 'F11', 'child': 'XXX2', 'multiplier': 1.0}, {'parent': 'F12', 'child': 'F4', 'multiplier': 1.0}, {'parent': 'F12', 'child': 'F8', 'multiplier': -1.0}, {'parent': 'F13', 'child': 'F12', 'multiplier': 0.23}, {'parent': 'F14', 'child': 'F13', 'multiplier': -2.0}, {'parent': 'F14', 'child': 'F12', 'multiplier': 2.0}];
+table_data.secondary_cells_2 = [{'parent': 'E4', 'child': 'E5', 'multiplier': 1.0, 'iteration': 1}, {'parent': 'E4', 'child': 'E6', 'multiplier': 1.0, 'iteration': 1}, {'parent': 'E4', 'child': 'E7', 'multiplier': 1.0, 'iteration': 1}, {'parent': 'E8', 'child': 'E9', 'multiplier': 1.0, 'iteration': 1}, {'parent': 'E8', 'child': 'E10', 'multiplier': 1.0, 'iteration': 1}, {'parent': 'E8', 'child': 'E11', 'multiplier': 1.0, 'iteration': 1}, {'parent': 'E12', 'child': 'E5', 'multiplier': 1.0, 'iteration': 2}, {'parent': 'E12', 'child': 'E6', 'multiplier': 1.0, 'iteration': 2}, {'parent': 'E12', 'child': 'E7', 'multiplier': 1.0, 'iteration': 2}, {'parent': 'E12', 'child': 'E9', 'multiplier': -1.0, 'iteration': 2}, {'parent': 'E12', 'child': 'E10', 'multiplier': -1.0, 'iteration': 2}, {'parent': 'E12', 'child': 'E11', 'multiplier': -1.0, 'iteration': 2}, {'parent': 'E13', 'child': 'E5', 'multiplier': 0.2, 'iteration': 3}, {'parent': 'E13', 'child': 'E6', 'multiplier': 0.2, 'iteration': 3}, {'parent': 'E13', 'child': 'E7', 'multiplier': 0.2, 'iteration': 3}, {'parent': 'E13', 'child': 'E9', 'multiplier': -0.2, 'iteration': 3}, {'parent': 'E13', 'child': 'E10', 'multiplier': -0.2, 'iteration': 3}, {'parent': 'E13', 'child': 'E11', 'multiplier': -0.2, 'iteration': 3}, {'parent': 'E14', 'child': 'E5', 'multiplier': -0.4, 'iteration': 4}, {'parent': 'E14', 'child': 'E6', 'multiplier': -0.4, 'iteration': 4}, {'parent': 'E14', 'child': 'E7', 'multiplier': -0.4, 'iteration': 4}, {'parent': 'E14', 'child': 'E9', 'multiplier': 0.4, 'iteration': 4}, {'parent': 'E14', 'child': 'E10', 'multiplier': 0.4, 'iteration': 4}, {'parent': 'E14', 'child': 'E11', 'multiplier': 0.4, 'iteration': 4}, {'parent': 'E14', 'child': 'E5', 'multiplier': 2.0, 'iteration': 3}, {'parent': 'E14', 'child': 'E6', 'multiplier': 2.0, 'iteration': 3}, {'parent': 'E14', 'child': 'E7', 'multiplier': 2.0, 'iteration': 3}, {'parent': 'E14', 'child': 'E9', 'multiplier': -2.0, 'iteration': 3}, {'parent': 'E14', 'child': 'E10', 'multiplier': -2.0, 'iteration': 3}, {'parent': 'E14', 'child': 'E11', 'multiplier': -2.0, 'iteration': 3}, {'parent': 'F4', 'child': 'E5', 'multiplier': 1.0015, 'iteration': 2}, {'parent': 'F4', 'child': 'E5', 'multiplier': 2.003, 'iteration': 3}, {'parent': 'F4', 'child': 'E5', 'multiplier': -2.0, 'iteration': 2}, {'parent': 'F4', 'child': 'E6', 'multiplier': 1.0, 'iteration': 2}, {'parent': 'F4', 'child': 'E7', 'multiplier': 0.96, 'iteration': 2}, {'parent': 'F5', 'child': 'E5', 'multiplier': 1.0015, 'iteration': 1}, {'parent': 'F6', 'child': 'E5', 'multiplier': 2.003, 'iteration': 2}, {'parent': 'F6', 'child': 'E5', 'multiplier': -2.0, 'iteration': 1}, {'parent': 'F6', 'child': 'E6', 'multiplier': 1.0, 'iteration': 1}, {'parent': 'F7', 'child': 'E7', 'multiplier': 0.96, 'iteration': 1}, {'parent': 'F8', 'child': 'E9', 'multiplier': 1.5, 'iteration': 2}, {'parent': 'F8', 'child': 'E10', 'multiplier': 1.0, 'iteration': 2}, {'parent': 'F8', 'child': 'XXX1', 'multiplier': -1.0, 'iteration': 2}, {'parent': 'F8', 'child': 'E11', 'multiplier': 1.0, 'iteration': 2}, {'parent': 'F8', 'child': 'XXX2', 'multiplier': 1.0, 'iteration': 2}, {'parent': 'F9', 'child': 'E9', 'multiplier': 1.5, 'iteration': 1}, {'parent': 'F10', 'child': 'E10', 'multiplier': 1.0, 'iteration': 1}, {'parent': 'F10', 'child': 'XXX1', 'multiplier': -1.0, 'iteration': 1}, {'parent': 'F11', 'child': 'E11', 'multiplier': 1.0, 'iteration': 1}, {'parent': 'F11', 'child': 'XXX2', 'multiplier': 1.0, 'iteration': 1}, {'parent': 'F12', 'child': 'E5', 'multiplier': 1.0015, 'iteration': 3}, {'parent': 'F12', 'child': 'E5', 'multiplier': 2.003, 'iteration': 4}, {'parent': 'F12', 'child': 'E5', 'multiplier': -2.0, 'iteration': 3}, {'parent': 'F12', 'child': 'E6', 'multiplier': 1.0, 'iteration': 3}, {'parent': 'F12', 'child': 'E7', 'multiplier': 0.96, 'iteration': 3}, {'parent': 'F12', 'child': 'E9', 'multiplier': -1.5, 'iteration': 3}, {'parent': 'F12', 'child': 'E10', 'multiplier': -1.0, 'iteration': 3}, {'parent': 'F12', 'child': 'XXX1', 'multiplier': 1.0, 'iteration': 3}, {'parent': 'F12', 'child': 'E11', 'multiplier': -1.0, 'iteration': 3}, {'parent': 'F12', 'child': 'XXX2', 'multiplier': -1.0, 'iteration': 3}, {'parent': 'F13', 'child': 'E5', 'multiplier': 0.23034500000000002, 'iteration': 4}, {'parent': 'F13', 'child': 'E5', 'multiplier': 0.46069000000000004, 'iteration': 5}, {'parent': 'F13', 'child': 'E5', 'multiplier': -0.46, 'iteration': 4}, {'parent': 'F13', 'child': 'E6', 'multiplier': 0.23, 'iteration': 4}, {'parent': 'F13', 'child': 'E7', 'multiplier': 0.2208, 'iteration': 4}, {'parent': 'F13', 'child': 'E9', 'multiplier': -0.34500000000000003, 'iteration': 4}, {'parent': 'F13', 'child': 'E10', 'multiplier': -0.23, 'iteration': 4}, {'parent': 'F13', 'child': 'XXX1', 'multiplier': 0.23, 'iteration': 4}, {'parent': 'F13', 'child': 'E11', 'multiplier': -0.23, 'iteration': 4}, {'parent': 'F13', 'child': 'XXX2', 'multiplier': -0.23, 'iteration': 4}, {'parent': 'F14', 'child': 'E5', 'multiplier': -0.46069000000000004, 'iteration': 5}, {'parent': 'F14', 'child': 'E5', 'multiplier': -0.9213800000000001, 'iteration': 6}, {'parent': 'F14', 'child': 'E5', 'multiplier': 0.92, 'iteration': 5}, {'parent': 'F14', 'child': 'E6', 'multiplier': -0.46, 'iteration': 5}, {'parent': 'F14', 'child': 'E7', 'multiplier': -0.4416, 'iteration': 5}, {'parent': 'F14', 'child': 'E9', 'multiplier': 0.6900000000000001, 'iteration': 5}, {'parent': 'F14', 'child': 'E10', 'multiplier': 0.46, 'iteration': 5}, {'parent': 'F14', 'child': 'XXX1', 'multiplier': -0.46, 'iteration': 5}, {'parent': 'F14', 'child': 'E11', 'multiplier': 0.46, 'iteration': 5}, {'parent': 'F14', 'child': 'XXX2', 'multiplier': 0.46, 'iteration': 5}, {'parent': 'F14', 'child': 'E5', 'multiplier': 2.003, 'iteration': 4}, {'parent': 'F14', 'child': 'E5', 'multiplier': 4.006, 'iteration': 5}, {'parent': 'F14', 'child': 'E5', 'multiplier': -4.0, 'iteration': 4}, {'parent': 'F14', 'child': 'E6', 'multiplier': 2.0, 'iteration': 4}, {'parent': 'F14', 'child': 'E7', 'multiplier': 1.92, 'iteration': 4}, {'parent': 'F14', 'child': 'E9', 'multiplier': -3.0, 'iteration': 4}, {'parent': 'F14', 'child': 'E10', 'multiplier': -2.0, 'iteration': 4}, {'parent': 'F14', 'child': 'XXX1', 'multiplier': 2.0, 'iteration': 4}, {'parent': 'F14', 'child': 'E11', 'multiplier': -2.0, 'iteration': 4}, {'parent': 'F14', 'child': 'XXX2', 'multiplier': -2.0, 'iteration': 4}];
+
+    const tbl = document.querySelector(".c_table");
+
+function _get_formatNumbers(format, precission) {
+  if (format === "None") {
+    return (x) => x.toFixed(parseInt(precission, 10));
+  }
+  if (format === "comma") {
+    return (x) =>
+      x
+        .toFixed(parseInt(precission, 10))
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  if (format === "space") {
+    return (x) =>
+      x
+        .toFixed(parseInt(precission, 10))
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
+  return (x) => x;
+}
+
+const format_number = _get_formatNumbers("comma", "0");
+
+tbl.addEventListener("dblclick", (e) => {
+  const el = e.target;
+  if (el.classList.contains("c_values")) {
+    el.contentEditable = true;
+    setTimeout(function () {
+      el.focus();
+      if (el.dataset["isFormula"]) {
+        el.innerText = table_data.secondary_cells[el.id];
+        const f = table_data.secondary_cells_1.filter((x) => x.parent === el.id);
+        for (const k of f) {
+          document.getElementById(k.child).classList.add("c_formula_childs");
+        }
+      }
+
+      if (!el.dataset["isFormula"]) {
+        el.innerText = table_data.all_cells[el.id];
+      }
+    }, 0);
+  }
+});
+
+tbl.addEventListener("focusout", (e) => {
+  const el = e.target;
+  if (el.classList.contains("c_values")) {
+    el.contentEditable = false;
+    if (el.dataset["isFormula"]) {
+      el.innerText = format_number(table_data.all_cells[el.id]);
+      const f = table_data.secondary_cells_1.filter((x) => x.parent === el.id);
+      for (const k of f) {
+        document.getElementById(k.child).classList.remove("c_formula_childs");
+      }
+    }
+
+    if (!el.dataset["isFormula"]) {
+      el.innerText = format_number(table_data.all_cells[el.id]);
+    }
+  }
+});
+
+function recalculate_values() {
+  const new_values = {};
+  for (const k in table_data.primary_cells) {
+    new_values[k] = table_data.all_cells[k];
+  }
+  let iter = 1;
+  while (true) {
+    let f = table_data.secondary_cells_2.filter((el) => el.iteration === iter);
+    if (f.length === 0) {
+      break;
+    }
+    for (const e of f) {
+      new_values[e.parent] = (new_values[e.parent] || 0) + new_values[e.child] * e.multiplier;
+    }
+    iter++;
+  }
+  for (const k in new_values) {
+    if (!k.startsWith("XXX")) {
+      document.getElementById(k).innerText = format_number(new_values[k]);
+    }
+  }
+  table_data.all_cells = new_values;
+}
+
+tbl.addEventListener("keypress", (e) => {
+  const el = e.target;
+  const before_modification = table_data.all_cells[el.id];
+  if (el.classList.contains("c_values")) {
+    if (e.key === "Enter") {
+      if (!el.dataset["isFormula"]) {
+        table_data.all_cells[el.id] = eval(el.innerText.replace("=", "+")) * 1;
+        const after_modyfication = eval(el.innerText.replace("=", "+")) * 1;
+        // console.log("Przed: ", before_modification, "   Po:", after_modyfication);
+        if (before_modification !== after_modyfication) {
+          recalculate_values();
+        }
+        //el.innerText = table_data.formula_cells[el.id];
+      }
+      el.contentEditable = false;
+    }
+  }
+});
+
+function getStyleVal(elm, css) {
+  return window.getComputedStyle(elm, null).getPropertyValue(css);
+}
+
+function paddingDiff(col) {
+  if (getStyleVal(col, "box-sizing") == "border-box") {
+    return 0;
+  }
+
+  var padLeft = getStyleVal(col, "padding-left");
+  var padRight = getStyleVal(col, "padding-right");
+  return parseInt(padLeft) + parseInt(padRight);
+}
+
+function setListeners(div) {
+  var pageX, curCol, nxtCol, curColWidth, nxtColWidth;
+  div.addEventListener("mousedown", function (e) {
+    curCol = e.target.parentElement;
+    pageX = e.pageX;
+    curColLetter = curCol.innerText;
+    selected_class = ".c_col_" + curColLetter;
+
+    var padding = paddingDiff(curCol);
+
+    curColWidth = curCol.offsetWidth - padding;
+    cur_table_width = document.querySelector(".c_table").offsetWidth;
+    if (nxtCol) nxtColWidth = nxtCol.offsetWidth - padding;
+  });
+
+  div.addEventListener("mouseover", function (e) {
+    e.target.style.borderRight = "2px solid #0000ff";
+  });
+
+  div.addEventListener("mouseout", function (e) {
+    e.target.style.borderRight = "";
+  });
+
+  document.addEventListener("mousemove", function (e) {
+    if (curCol) {
+      var diffX = e.pageX - pageX;
+      //console.log((curColWidth + diffX))
+      document.querySelector(selected_class).style.width = curColWidth + diffX + "px";
+      document.querySelector(".c_table").style.width = cur_table_width + diffX + "px";
+    }
+  });
+
+  document.addEventListener("mouseup", function (e) {
+    curCol = undefined;
+    nxtCol = undefined;
+    pageX = undefined;
+    nxtColWidth = undefined;
+    curColWidth = undefined;
+  });
+}
+
+const all_resize = document.querySelectorAll(".c_table th div");
+const arr = Array.from(all_resize);
+for (let i = 1; i < arr.length; i++) {
+  setListeners(arr[i]);
+}
+
+table_data["all_cells"] = {
+  ...table_data.primary_cells,
+  ...table_data.formula_cells,
+};
+table_data["all_cells_ory"] = {
+  ...table_data.primary_cells,
+  ...table_data.formula_cells,
+};
+table_data["changed_cells"] = {};
+
+for (const k in table_data.all_cells_ory) {
+  if (!k.startsWith("XXX")) {
+    document.getElementById(k).innerText = format_number(table_data.all_cells_ory[k]);
+  }
+}
+
+    </script>
+    
+    </body>
+    </html>
+    
